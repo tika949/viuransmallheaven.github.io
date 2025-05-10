@@ -4,29 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viuran Small Heaven English Boarding School</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background: #f0f8ff; margin: 0; padding: 0; }
-    header { background: #4a90e2; color: white; padding: 30px 20px; text-align: center; }
-    nav { background: #2d6cdf; padding: 15px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 30px 20px; max-width: 900px; margin: auto; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-top: 20px; }
-    footer { background: #2d6cdf; color: white; text-align: center; padding: 15px; margin-top: 20px; }
-    h2 { color: #2d6cdf; }
-    ul { line-height: 1.8; }
-    <link rel="stylesheet" href="style.css">
-  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .message-bar {
+      background: #ffcc00;
+      color: #000;
+      padding: 10px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .message-bar span {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+      font-weight: bold;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    nav {
+      background: #2d6cdf;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    footer {
+      background: #2d6cdf;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    h2 {
+      color: #2d6cdf;
+    }
+    ul {
+      line-height: 1.8;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Viuran Small Heaven English Boarding School</h1><h1>मेरो वेबसाइटमा स्वागत छ</h1>
-
-<div class="message-bar">
-  <span>📢 नयाँ सूचना: हाम्रो सेवा २४/७ उपलब्ध छ। धन्यवाद!</span>
-</div>
-<h1>
+  <h1>Viuran Small Heaven English Boarding School</h1>
+  <h1>मेरो वेबसाइटमा स्वागत छ</h1>
   <p>Providing Quality Education in Rural Area</p>
 </header>
+
+<div class="message-bar">
+  <span>📢 नयाँ सूचना: हाम्रो सेवा २४/७ उपलब्ध छ। धन्यवाद! 📢 नयाँ सूचना: हाम्रो सेवा २४/७ उपलब्ध छ। धन्यवाद!</span>
+</div>
 
 <nav>
   <a href="#about">About Us</a>
