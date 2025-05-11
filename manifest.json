@@ -1,8 +1,7 @@
 {
   "name": "Viuran Small Heaven",
   "short_name": "Viuran",
-  "description": "A School Website",
-  "start_url": "/",
+  "start_url": "/viuransmallheaven.github.io/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
