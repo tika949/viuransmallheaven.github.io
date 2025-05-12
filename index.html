@@ -222,4 +222,34 @@
   </section>
   <section id="gallery">
     <h2>फोटो ग्यालरी</h2>
+   <script>
+  let timer;
+  const menu = document.createElement("div");
+  menu.className = "long-press-menu";
+  document.body.appendChild(menu);
+
+  document.querySelectorAll(".phone-number").forEach(el => {
+    el.addEventListener("touchstart", e => {
+      timer = setTimeout(() => {
+        const number = el.dataset.number;
+        menu.innerHTML = `
+          <div onclick="window.location.href='tel:${number}'">Call</div>
+          <div onclick="navigator.clipboard.writeText('${number}'); menu.style.display='none';">Copy</div>
+        `;
+        const touch = e.touches[0];
+        menu.style.top = `${touch.pageY}px`;
+        menu.style.left = `${touch.pageX}px`;
+        menu.style.display = "block";
+      }, 600); // 600 ms = long press
+    });
+
+    el.addEventListener("touchend", () => {
+      clearTimeout(timer);
+    });
+  });
+
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+  });
+</script> 
 0
