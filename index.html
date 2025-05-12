@@ -3,6 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>शिक्षक सूची - Viuran Small Heaven</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      background-color: #0077b6;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+    .teacher-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .teacher-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 220px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+    .teacher-card:hover {
+      transform: scale(1.03);
+    }
+    .teacher-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .teacher-name {
+      font-weight: bold;
+      color: #023e8a;
+    }
+    .teacher-subject {
+      font-size: 14px;
+      color: #555;
+    }
+    .phone {
+      font-size: 13px;
+      margin-top: 5px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<h1>शिक्षकहरूको सूची</h1>
+
+<div class="teacher-container">
+  <!-- शिक्षक कार्डहरू -->
+
+  <div class="teacher-card">
+    <img src="img/raju.jpg" alt="Raju Pandey">
+    <div class="teacher-name">Mr. Raju Pandey</div>
+    <div class="teacher-subject">Managing Director</div>
+  </div>
+
+  <div class="teacher-card">
+    <img src="img/netra.jpg" alt="Netra Bahadur Chaudhary">
+    <div class="teacher-name">Netra Bahadur Chaudhary</div>
+    <div class="teacher-subject">Principal – Economics</div>
+  </div>
+
+  <div class="teacher-card">
+    <img src="img/tikaram.jpg" alt="Tikaram Pokhrel">
+    <div class="teacher-name">Tikaram Pokhrel</div>
+    <div class="teacher-subject">Vice Principal – Nepali</div>
+    <div class="phone">📞 +977-9847434547</div>
+  </div>
+
+  <div class="teacher-card">
+    <img src="img/manoj.jpg" alt="Manoj Pathak">
+    <div class="teacher-name">Manoj Pathak</div>
+    <div class="teacher-subject">English</div>
+    <div class="phone">📞 +977-9765953356</div>
+  </div>
+
+  <div class="teacher-card">
+    <img src="img/bimala.jpg" alt="Bimala Mukhiya">
+    <div class="teacher-name">Bimala Mukhiya</div>
+    <div class="teacher-subject">Office Accountant</div>
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Viuran Small Heaven EBS</title>
   <style>
     body {
