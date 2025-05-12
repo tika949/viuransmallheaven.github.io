@@ -4,6 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viuran Small Heaven English Boarding School</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#000000">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome to Viuran Small Heaven</h1>
+  <div class="message-bar">
+    📢 सूचना: नयाँ सूचना प्रणाली सुरु गरिएको छ।
+  </div>
+</body>
+</html><!DOCh<!DOCTYPETYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viuran Small Heaven English Boarding School</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
