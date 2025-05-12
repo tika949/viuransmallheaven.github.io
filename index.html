@@ -1,124 +1,43 @@
-<!DOCTYPE html>
-<html lang="ne">
+<!DOCTYPE html><html lang="ne">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>शिक्षक सूची - Viuran Small Heaven</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viuran Small Heaven English Boarding School</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f4f8;
+      background: #f5f9ff;
       margin: 0;
       padding: 0;
-    }
-    h1 {
-      text-align: center;
-      background-color: #0077b6;
-      color: white;
-      padding: 20px;
-      margin: 0;
-    }
-    .teacher-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 20px;
-    }
-    .teacher-card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 220px;
-      text-align: center;
-      padding: 15px;
-      transition: transform 0.2s;
-    }
-    .teacher-card:hover {
-      transform: scale(1.03);
-    }
-    .teacher-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    .teacher-name {
-      font-weight: bold;
-      color: #023e8a;
-    }
-    .teacher-subject {
-      font-size: 14px;
-      color: #555;
-    }
-    .phone {
-      font-size: 13px;
-      margin-top: 5px;
-      color: #444;
-    }
-  </style>
-</head>
-<body>
-
-<h1>शिक्षकहरूको सूची</h1>
-
-<div class="teacher-container">
-  <!-- शिक्षक कार्डहरू -->
-
-  <div class="teacher-card">
-    <img src="img/raju.jpg" alt="Raju Pandey">
-    <div class="teacher-name">Mr. Raju Pandey</div>
-    <div class="teacher-subject">Managing Director</div>
-  </div>
-
-  <div class="teacher-card">
-    <img src="img/netra.jpg" alt="Netra Bahadur Chaudhary">
-    <div class="teacher-name">Netra Bahadur Chaudhary</div>
-    <div class="teacher-subject">Principal – Economics</div>
-  </div>
-
-  <div class="teacher-card">
-    <img src="img/tikaram.jpg" alt="Tikaram Pokhrel">
-    <div class="teacher-name">Tikaram Pokhrel</div>
-    <div class="teacher-subject">Vice Principal – Nepali</div>
-    <div class="phone">📞 +977-9847434547</div>
-  </div>
-
-  <div class="teacher-card">
-    <img src="img/manoj.jpg" alt="Manoj Pathak">
-    <div class="teacher-name">Manoj Pathak</div>
-    <div class="teacher-subject">English</div>
-    <div class="phone">📞 +977-9765953356</div>
-  </div>
-
-  <div class="teacher-card">
-    <img src="img/bimala.jpg" alt="Bimala Mukhiya">
-    <div class="teacher-name">Bimala Mukhiya</div>
-    <div class="teacher-subject">Office Accountant</div>
-<!DOCTYPE html>
-<html lang="ne">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Viuran Small Heaven EBS</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f4f8;
       color: #333;
-      margin: 0;
-      padding: 0;
     }
     header {
-      background-color: #0077b6;
+      background: #3366cc;
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+    .message-bar {
+      background: #ffcc00;
+      color: #000;
+      padding: 10px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .message-bar span {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+      font-weight: bold;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
     nav {
-      background-color: #023e8a;
-      padding: 10px;
+      background: #2851a3;
+      padding: 15px;
       text-align: center;
     }
     nav a {
@@ -127,155 +46,121 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-      max-width: 900px;
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    .section {
-      background: white;
+    .box {
+      flex: 1 1 45%;
+      background: #e3f2fd;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #023e8a;
-      margin-top: 0;
+    .box.secondary {
+      background: #fff3e0;
     }
-    .notice {
-      background-color: #fff3cd;
-      padding: 10px;
-      border-left: 5px solid #ffc107;
-      margin: 10px 0;
-      border-radius: 5px;
-    }
-    ul {
-      padding-left: 20px;
+    section {
+      background: white;
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     footer {
-      background-color: #03045e;
+      background: #2851a3;
       color: white;
       text-align: center;
-      padding: 10px;
-      font-size: 14px;
+      padding: 20px;
     }
-    a.button {
-      display: inline-block;
-      background-color: #0077b6;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 10px;
+    h2 {
+      color: #2d6cdf;
     }
-    a.button:hover {
-      background-color: #005f86;
+    ul {
+      line-height: 1.8;
+    }
+    @media (max-width: 768px) {
+      .intro-section {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
-<body>
-
-<header>
+<body><header>
   <h1>Viuran Small Heaven English Boarding School</h1>
-  <p>मध्यबिन्दु-१५, नवलपरासी (बर्दघाट सुस्ता पूर्व)</p>
-</header>
-
-<nav>
-  <a href="#about">परिचय</a>
-  <a href="#message">सन्देश</a>
-  <a href="#teachers">शिक्षक</a>
-  <a href="#notice">सूचना</a>
-  <a href="#contact">सम्पर्क</a>
-</nav>
-
-<main>
-
-  <div class="notice">
-    📢 सूचना: नयाँ सूचना प्रणाली सुरु गरिएको छ।
-  </div>
-
-  <div class="notice">
-    📢 सूचना: २०८२ जेष्ठ ९ गते शुक्रबार दिउँसो २ बजेपछि विद्यार्थीहरूको House Division गरिनेछ। वार्षिक कार्ययोजनाका लागि शिक्षकबीच छलफल हुनेछ। सबै शिक्षकहरू अनिवार्य उपस्थित हुनुहोला।
-  </div>
-
-  <div class="section" id="about">
+<p>Madhyabindu-15, Nawalparasi(Ba.Su.Pu.)</p>
+  <p>ग्रामिण क्षेत्रमा गुणस्तरीय शिक्षाको प्रयास</p>
+</header><div class="message-bar">
+  <span>📢 सूचना: २०८२ जेष्ठ ९ गते शुक्रबार दिउसो २ बजेपछि विद्यर्थीहरुको House Division गरिने र अतिरिक्त क्रियाकलाप सम्बन्धी वार्षिक कार्ययोजनाका लागि शिक्षकशिक्षिकाबीच छलफल हुनेछ। सबै शिक्षकहरूलाई अनिवार्य उपस्थितिको लागि अनुरोध गरिन्छ! 📢</span>
+</div><nav>
+  <a href="#about">About</a>
+  <a href="#principal">Message</a>
+  <a href="#teachers">Teachers</a>
+  <a href="#notice">Notice</a>
+  <a href="#contact">Contact</a>
+</nav><div class="intro-section">
+  <div class="box">
     <h2>विद्यालयको परिचय</h2>
-    <p><strong>स्थापना:</strong> वि.सं. २०५६</p>
-    <p><strong>पठनपाठन:</strong> Montessori प्रणाली अनुसार Play Group देखि कक्षा १० सम्म</p>
-    <p><strong>दृष्टिकोण:</strong> ग्रामिण क्षेत्रमा पहुँचयुक्त गुणस्तरीय शिक्षा प्रदान गर्दै आएको एक मात्र बोर्डिङ स्कुल</p>
+    <p><strong>स्थापना:</strong> वि.सं. २०५६<br>
+    <strong>पठनपाठन:</strong> Montessori प्रणालीमा आधारित Play Group र कक्षा नर्सरीदेखि  कक्षा 10 सम्म लामो समयदेखि उत्कृष्ट नतिजा दिन सफल विद्यालय<br>
+    <strong>दृष्टिकोण:</strong> ग्रामिण क्षेत्रमा पनि पहुँचयुक्त गुणस्तरीय शिक्षा प्रदान गर्दे आइरहेको एकमात्र बोर्डिङ स्कुल</p>
   </div>
-
-  <div class="section">
+  <div class="box secondary">
     <h2>विशेष सूचना</h2>
-    <p>नयाँ शैक्षिक सत्र सुरु भइसकेकोले विद्यार्थीहरूलाई युनिफर्म, किताब तथा आवश्यक सामग्री समयमै जुटाउन अनुरोध गरिन्छ।</p>
+    <p>नयाँ शैक्षिकसत्र सुरु भइसकेकोले विद्यार्थीहरूलाई युनिफर्म, किताब तथा आवश्यक सामग्री समयमै जुटाउन सूचित गरिन्छ।</p>
   </div>
-
-  <div class="section" id="message">
-    <h2>प्रधानाध्यापकको सन्देश</h2>
-    <p>
-      आदरणीय अभिभावकज्यूहरू, प्यारा विद्यार्थीहरू तथा विद्यालयप्रेमी महानुभावहरू, नमस्कार!<br><br>
-      हाम्रो विद्यालय डिजिटल माध्यममार्फत तपाईंहरूसँग जोडिन पाउँदा हर्षित छ। शिक्षा केवल किताबी ज्ञान होइन, यो जीवन बाँच्ने कला र सिर्जनशीलताको आधार हो।<br><br>
-      हाम्रो लक्ष्य: आत्मविश्वास, मूल्यमा आधारित जीवन, संस्कार र समाजप्रति उत्तरदायित्व विकास गर्नु।<br><br>
-      तपाईंहरूको साथ, सुझाव र विश्वासले हामीलाई अघि बढ्न ऊर्जा दिएको छ।<br><br>
-      तपाईंहरूको निरन्तर साथको अपेक्षा गर्दै — सबैमा शुभकामना!
-    </p>
-  </div>
-
-  <div class="section" id="teachers">
-    <h2>शिक्षकहरूको सूची</h2>
-    <ul>
-      <li>Mr. Raju Pandey – Managing Director</li>
-      <li>Principal Netra Bahadur Chaudhary – Economics</li>
-      <li>Vice Principal Tikaram Pokhrel – Nepali – +977-9847434547</li>
-      <li>Bimala Mukhiya – Office Accountant</li>
-      <li>Krishna Bastakoti – Math and Science</li>
-      <li>Bhuwan Khanal – Account and Social</li>
-      <li>Manoj Pathak – English – +977-9765953356</li>
-      <li>Anup Kandel – Maths and Science</li>
-      <li>Sanjay Mahato – Maths and Health</li>
-      <li>Laxmi Kumal – Social</li>
-      <li>Bhagawati Acharya – Nepali</li>
-      <li>Nisha Palpali – Computer</li>
-      <li>Asmita Amgai – English</li>
-      <li>Nikita Kandel – Maths</li>
-      <li>Samikshya Khanal – Social and Local Subject</li>
-      <li>Shova Chaudhary – Science</li>
-      <li>Bishnu Basyal, Lila Kumal, Aasha Chaudhary – Grade Teachers</li>
-      <li>Sita Chaudhary – Play Group</li>
-    </ul>
-  </div>
-
-  <div class="section" id="notice">
-    <h2>परीक्षा र नतिजा</h2>
-    <p>परीक्षा रुटिङ हेर्नुहोस्:</p>
-    <a href="#" class="button">रुटिङ हेर्नुहोस्</a>
-
-    <p>नतिजा (2081) हेर्नुहोस्:</p>
-    <a href="#" class="button">PDF डाउनलोड गर्नुहोस्</a>
-  </div>
-
-  <div class="section" id="contact">
-    <h2>डाउनलोड</h2>
-    <ul>
-      <li><a href="#">भर्ना फारम</a></li>
-      <li><a href="#">विद्यालय विवरण पुस्तिका</a></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>फोटो ग्यालरी</h2>
-    <p>फोटोहरू चाँडै अपडेट गरिनेछ।</p>
-  </div>
-
-</main>
-
-<footer>
-  &copy; 2025 Viuran Small Heaven English Boarding School. सबै अधिकार सुरक्षित।
-</footer>
-
-</body>
+</div><section id="principal">
+  <h2>प्रधानाध्यापकको सन्देश</h2>
+  <p>
+    आदरणीय अभिभावकज्यूहरू, प्यारा विद्यार्थीहरू तथा विद्यालयप्रेमी महानुभावहरू, नमस्कार!
+    हाम्रो विद्यालय पनि आधुनिक डिजिटल माध्यममार्फत् तपाईंहरूसँग जोडिन पाउँदा म अत्यन्त हर्षित छु। शिक्षा केवल किताबी ज्ञानको सीमित दायरा मात्र होइन; यो जीवन बाँच्ने कला, सोच्ने तरिका, र सिर्जनशीलताको मूल आधार हो भन्ने विश्वाससहित हामी अघि बढिरहेका छौं।
+    हाम्रो प्रमुख उद्देश्य भनेको हरेक विद्यार्थीमा आत्मविश्वास, मूल्यमाआधारित जीवनशैली,संस्कारसहितको ज्ञान र समाजप्रति उत्तरदायित्व हुने चेतनाको विकास गर्नु हो। हामी गुणस्तरीय शिक्षा, अनुशासित वातावरण, प्रविधिमैत्री पठनपाठन, र विद्यार्थीको सर्वाङ्गिण विकासमा प्रतिबद्ध छौं।
+    आदरणीय अभिभावकज्यूहरू, तपाईंहरूको निरन्तर साथ, सुझाव र विश्वासले हाम्रो यात्रालाई अझ सशक्त बनाइरहेको छ। हामीले विद्यालय, विद्यार्थी र अभिभावकबीचको त्रिकोणात्मक सम्बन्धलाई अत्यन्त महत्वपूर्ण ठान्छौं। यस सम्बन्धलाई अझ मजबुत बनाउन हामी सधैं खुला संवाद र सहकार्यमा विश्वास गर्छौं प्यारा विद्यार्थीहरू, तपाईंहरू हाम्रो भविष्य हुनुहुन्छ । अध्ययन, अनुशासन, ईमानदारी र परिश्रमलाई जीवनको मूल मन्त्र बनाउँदै अघि बढ्नुहोस्। तपाईंहरूको हरेक सफलतामा हाम्रो गर्व लुकेको छ।
+    अन्त्यमा, यस वेबसाइटमार्फत विद्यालयका गतिविधिहरू, उपलब्धिहरू र नवीनतम सूचनाहरू तपाईंहरूसमक्ष पुर्‍याउने प्रयास गरिनेछ। तपाईंहरूको निरन्तर साथ र सद्भावनाको अपेक्षा राख्दै,
+     सबैमा हार्दिक शुभकामना व्यक्त गर्दछु ।
+  </p>
+  <h2>शिक्षकहरूको सूची / Our Faculty</h2>
+  <ul>
+    <li>Mr. Raju Pandey – Managing Director</li>
+    <li>Principal Netra Bahadur Chaudhary – Economics</li>
+    <li>Vice Principal Tikaram Pokhrel – Nepali (Secondary Level)</li> <p><strong>फोन:</strong> +977-9847434547</p>
+    <li>Bimala Mukhiya – Office Accountant</li>
+    <li>Krishna Bastakoti – Math and Science (Secondary Level)</li>
+    <li>Bhuwan Khanal – Account and Social (Secondary Level)</li>
+    <li>Manoj Pathak – English (Secondary Level)</li>
+    <li>Anup Kandel – Maths and Science</li>
+    <li>Sanjay Mahato – Mathes and Health</li>
+    <li>Laxmi Kumal – Social</li>
+    <li>Bhagawati Acharya – Nepali</li>
+    <li>Nisha Palpali – Computer</li>
+    <li>Asmita Amgai – English</li>
+    <li>Nikita Kandel – Maths</li>
+    <li>Samikshya Khanal – Social and Local Subject</li>
+    <li>Shova Chaudhary – Science</li>
+    <li>Bishnu Basyal – Grade Teacher</li>
+    <li>Lila Kumal – Grade Teacher</li>
+    <li>Aasha Chaudhary – Grade Teacher</li>
+    <li>Sita Chaudhary – Play Group Teacher</li>
+  </ul>
+</section>
+</section><section id="notice">
+  <h2>सूचना</h2>
+  <ul>
+    <li>२०८१ सालको नतिजा प्रकाशित भइसकेको छ।</li>
+    <li>नयाँ भर्ना खुल्ला छ — Nursery देखि कक्षा १० सम्म।</li>
+    <li>हाउस डिभिजन कार्यक्रम शुक्रबार दिउँसो २ बजे पछि हुनेछ।</li>
+  </ul>
+</section><section id="contact">
+  <h2>सम्पर्क</h2>
+  <p><strong>फोन:</strong> +977-9857041716,9857041716 +977-9847434547</p>
+  <p><strong>ईमेल:</strong> smallheaven789@gmail.com</p>
+  <p><strong>ठेगाना:</strong> Madhyabindu 15, Nawalparasi Bardaghat Susta Purva</p>
+</section><footer>
+  <p>&copy; २०८२ Viuran Small Heaven English Boarding School. सर्वाधिकार सुरक्षित।</p>
+</footer></body>
 </html>
