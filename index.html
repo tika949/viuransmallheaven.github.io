@@ -180,6 +180,32 @@
       अन्त्यमा, यस वेबसाइटमार्फत विद्यालयका गतिविधिहरू, उपलब्धिहरू र नवीनतम सूचनाहरू तपाईंहरूसमक्ष पुर्‍याउने प्रयास गरिनेछ। तपाईंहरूको निरन्तर साथ र सद्भावनाको अपेक्षा राख्दै,
        सबैमा हार्दिक शुभकामना व्यक्त गर्दछु ।
     </p>
+      <style>
+    .long-press-menu {
+      position: absolute;
+      display: none;
+      background-color: #f0f0f0;
+      border: 1px solid #aaa;
+      padding: 8px;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+
+    .long-press-menu div {
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+
+    .long-press-menu div:hover {
+      background-color: #ddd;
+    }
+
+    .phone-number {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
     <h2>शिक्षकहरूको सूची / Our Faculty</h2>
     <ul>
       <li>Mr. Raju Pandey – Managing Director</li>
@@ -203,6 +229,55 @@
       <li>Aasha Chaudhary – Grade Teacher</li>
       <li>Sita Chaudhary – Play Group Teacher</li>
     </ul>
+    div id="menu" class="long-press-menu">
+    <div id="callOption">Call</div>
+    <div id="copyOption">Copy</div>
+  </div>
+
+  <script>
+    let timer;
+    let longPressed = false;
+    const menu = document.getElementById('menu');
+
+    document.querySelectorAll('.phone-number').forEach(el => {
+      el.addEventListener('touchstart', function(e) {
+        timer = setTimeout(() => {
+          longPressed = true;
+          showMenu(e.touches[0].pageX, e.touches[0].pageY, el.dataset.number);
+        }, 600); // long press duration
+      });
+
+      el.addEventListener('touchend', function() {
+        clearTimeout(timer);
+        if (!longPressed) menu.style.display = 'none';
+        longPressed = false;
+      });
+    });
+
+    function showMenu(x, y, number) {
+      menu.style.left = x + 'px';
+      menu.style.top = y + 'px';
+      menu.style.display = 'block';
+
+      document.getElementById('callOption').onclick = () => {
+        window.location.href = 'tel:' + number;
+        menu.style.display = 'none';
+      };
+
+      document.getElementById('copyOption').onclick = () => {
+        navigator.clipboard.writeText(number).then(() => {
+          alert('Copied: ' + number);
+          menu.style.display = 'none';
+        });
+      };
+    }
+
+    document.body.addEventListener('click', () => {
+      menu.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
   </section>
   <section id="exam-routine">
     <h2>परीक्षा रुटिङ</h2>
